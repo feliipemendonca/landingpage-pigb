@@ -23,7 +23,7 @@ export default function Layout({ children }) {
                 <meta property="og:description" content={Text} /> 
                 <meta itemprop="description" content={Text} /> 
                 <meta name="twitter:description" content={Text} /> 
-                <meta property="og:url" content="https://argilatech.com.br" /> 
+                <meta property="og:url" content="hhttps://landingpage-pigb.vercel.app/" /> 
                 <meta property="og:type" content="website" /> 
                 <meta property="og:title" content="Primeira Igreja Batista em Goianinha" /> 
                 <meta property="og:image" content={Favicon} /> 
