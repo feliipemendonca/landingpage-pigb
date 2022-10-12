@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
 import styled from 'styled-components'
-import image from '../public/images/slide.jpg'
+import image from '../public/images/slide.png'
 
 
 const Title = styled.h1`
@@ -42,7 +42,7 @@ const PreTitle = styled.p`
 export default function section () {
     return(
         <>            
-            <section className='container pt-5'>
+            <section className='container'>
                 <div className="row py-lg-5">
                     <div className="col-12">
                         <Title className="text-center">
@@ -59,14 +59,14 @@ export default function section () {
             {/* 1 */}
             <section className="container py-5">
                 <div className="row">
-                    <div className="col-12 col-md-6 order-2 order-lg-1">
+                    {/* <div className="col-12 col-md-6 order-2 order-lg-1">
                         <Image
                             src={image}
                             alt="Picture of the author"
                             className="img-fluid rounded w-100"
                         />                        
-                    </div>
-                    <div className="col-12 col-lg-6 order-1 order-lg-2">
+                    </div> */}
+                    <div className="col-12 col-lg-12 order-1 order-lg-2">
                         <PreTitle>
                             1° João 5.13
                         </PreTitle>
@@ -86,7 +86,7 @@ export default function section () {
             {/* 2 */}
             <section className='container py-5'>
                 <div className="row">
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-lg-12">
                         <PreTitle>Romanos 3.23</PreTitle>
                         <Title className="text-start">
                            "Porque todos <Subtitle className='px-2'>pecaram</Subtitle> e destituidos estão da glória de Deus".
@@ -96,13 +96,13 @@ export default function section () {
                             O pecado é desobediência a Deus. Sendo assim somos todos pecadores. Por exemplo, todos nós já sentimos ira, inveja, cobiça, mentimos, fomos egoistas, orgulhosos etc. Você reconhece que já cometeu pecados?
                         </Text>
                     </div>
-                    <div className="col-12 col-md-6">
+                    {/* <div className="col-12 col-md-6">
                         <Image
                             src={image}
                             alt="Picture of the author"
                             className="img-fluid rounded w-100"
                         />
-                    </div>
+                    </div> */}
                     <div className="col-12">
                         <Text className='pt-4 pt-lg-0'>
                             <strong>Em Romanos 6.23, a Biblia diz: "Porque o salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna por Cristo Jesus, nosso Senhor".</strong>
@@ -123,7 +123,7 @@ export default function section () {
                     {/* <div className="col-12 col-md-6">
                         <img src="/images/slide.jpg" className="img-fluid rounded" alt="teste" />
                     </div> */}
-                    <div className="col-12 col-md-12">
+                    <div className="col-12 col-lg-12">
                         <PreTitle>
                             Romanos 5.8
                         </PreTitle>
@@ -147,7 +147,7 @@ export default function section () {
             {/* 4 */}
             <section className='container py-5'>
                 <div className="row">
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-lg-12">
                          <PreTitle>
                             Romanos 10.1
                         </PreTitle>

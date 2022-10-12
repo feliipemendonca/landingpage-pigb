@@ -89,41 +89,70 @@ function OpenModal() {
 
 export default function section () {
      // Handles the submit event on form submit.
-    const handleSubmit = async (event) => {
-        // Stop the form from submitting and refreshing the page.
-        event.preventDefault()
+    // const handleSubmit = async (event) => {
+    //     // Stop the form from submitting and refreshing the page.
+    //     event.preventDefault()
 
-        // Get data from the form.
-        const data = {
-            first: event.target.first.value,
-            last: event.target.last.value,
+    //     // console.log(event)
+
+    //     // Get data from the form.
+    //     const data = {
+    //         first: event.target.name.value,
+    //         last: event.target.phone.value,
+    //     }
+
+    //     // Send the data to the server in JSON format.
+    //     const JSONdata = JSON.stringify(data)
+
+    //     // API endpoint where we send form data.
+    //     const endpoint = '/api/contact'
+
+    //     // Form the request for sending data to the server.
+    //     const options = {
+    //     // The method is POST because we are sending data.
+    //     method: 'POST',
+    //     // Tell the server we're sending JSON.
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     // Body of the request is the JSON data we created above.
+    //     body: JSONdata,
+    //     }
+
+    //     // Send the form data to our forms API on Vercel and get a response.
+    //     await fetch(endpoint, options).then(function(response) {
+    //         console.log(response);
+    //     })
+
+    //     // Get the response data from server as JSON.
+    //     // If server returns the name submitted, that means the form works.
+    //     // const result = await response.json()
+
+    //     // console.log(result)
+    //     // alert(`Is this your full name: ${result.data}`)
+    // }
+
+    const handleSubmit = async (e) => { 
+        e.preventDefault()
+        console.log('Sending')
+        let data = {
+            first: e.target.name.value,
+            last: e.target.phone.value,
         }
 
-        // Send the data to the server in JSON format.
-        const JSONdata = JSON.stringify(data)
-
-        // API endpoint where we send form data.
-        const endpoint = '/api/form'
-
-        // Form the request for sending data to the server.
-        const options = {
-        // The method is POST because we are sending data.
-        method: 'POST',
-        // Tell the server we're sending JSON.
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        // Body of the request is the JSON data we created above.
-        body: JSONdata,
-        }
-
-        // Send the form data to our forms API on Vercel and get a response.
-        const response = await fetch(endpoint, options)
-
-        // Get the response data from server as JSON.
-        // If server returns the name submitted, that means the form works.
-        const result = await response.json()
-        alert(`Is this your full name: ${result.data}`)
+        await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then((res) => {
+            console.log('Response received')
+            if (res.status === 200) {
+                console.log('Response succeeded!')
+            }
+        })
     }
 
     return(
@@ -143,13 +172,13 @@ export default function section () {
                     <div className="row">
                         <div className="col-12 col-md-6">
                             <div className="form-floating mb-3">
-                                <Input type="email" className="form-control" id="floatingInput"   placeholderTextColor = 'red' placeholder="name@example.com" required />
+                                <Input type="text" className="form-control" id="floatingInput" name="name" required />
                                 <Label htmlFor="name">Nome e Sobrenome</Label>
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
                             <div className="form-floating mb-3">
-                                <Input type="tel" className="form-control" id="floatingInput" placeholder="name@example.com" required />
+                                <Input type="tel" className="form-control" id="floatingInput" name="phone" required />
                                 <Label htmlFor="whatsapp">Whatsapp</Label>
                             </div>
                         </div>
@@ -157,8 +186,8 @@ export default function section () {
                     <div className="row pt-4">
                         <div className="col-12 col-md-6">
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                                <OpenModal />
+                                {/* <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" /> */}
+                                {/* <OpenModal /> */}
                             </div>
                         </div>
                         <div className="col-12 col-md-6 d-flex justify-content-center pt-4 pt-md-0 justify-content-md-end align-content-center">

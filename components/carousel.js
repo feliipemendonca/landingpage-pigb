@@ -5,7 +5,7 @@ const Slides = _=> {
         return (
             <div className={index == 0 ? 'carousel-item active' : 'carousel-item'}>
                 <Image 
-                    src="/images/slide.jpg" 
+                    src="/images/slide.png" 
                     className="d-block w-100" 
                     alt="Picture of the author"
                     width={1200}
@@ -29,21 +29,30 @@ const Dots = _ => {
 
 const carousel = () => {
     return (
-        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
-            <div className="carousel-indicators">
-                <Dots />
-            </div>
-            <div className="carousel-inner">
-                <Slides />
-            </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-            </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-            </button>
+        // <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+        //     <div className="carousel-indicators">
+        //         <Dots />
+        //     </div>
+        //     <div className="carousel-inner">
+        //         <Slides />
+        //     </div>
+        //     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        //         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        //         <span className="visually-hidden">Previous</span>
+        //     </button>
+        //     <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        //         <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        //         <span className="visually-hidden">Next</span>
+        //     </button>
+        // </div>
+        <div className="container">
+            <Image 
+                src="/images/slide.png" 
+                className="d-block w-100 img-fluid" 
+                alt="Picture of the author"
+                width={700}
+                height={700}
+                layout="responsive" />
         </div>
     )
 }

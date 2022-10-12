@@ -1,11 +1,12 @@
 import React, { Component} from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
-import Logo from '../../public/images/logo.png'
+import Logo from '../../public/images/logo-green.png'
 
 const Header = styled.nav`
     z-index: 1;
-    background: #14C38E;
+    // background: #14C38E;
+    background: #fff;
 `;
 
 class Navbar extends Component {
@@ -38,7 +39,7 @@ class Navbar extends Component {
             <Header >
                 <div className={`navbar navbar-expand-lg w-100`}>
                 <div className="container">
-                    <a className="navbar-brand" href="#">
+                    <a className="navbar-brand m-0 p-0" href="#">
                         <Image
                             src={Logo}
                             alt="Picture of the author"
