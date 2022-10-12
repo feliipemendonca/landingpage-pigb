@@ -12,6 +12,7 @@ export default function Layout({ children }) {
     return (
         <>
             <Head>
+                <meta name="theme-color" content="#14C38E" />
                 <meta name="robots" content="index,follow,noodp" /> 
                 <meta name="googlebot" content="index,follow" /> 
                 <meta name="keywords" content="Criação de sites, " /> 
