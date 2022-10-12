@@ -43,10 +43,10 @@ class Navbar extends Component {
                             src={Logo}
                             alt="Picture of the author"
                             width={80}
-                            height={50}
+                            height={70}
                         />
                     </a>
-                    <button className="navbar-toggler" type="button">
+                    {/* <button className="navbar-toggler" type="button">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -55,7 +55,7 @@ class Navbar extends Component {
                                 <a className="nav-link active text-white" href="#">Home</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
                 </div>
             </Header>
