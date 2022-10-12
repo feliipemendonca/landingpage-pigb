@@ -134,8 +134,11 @@ export default function section () {
                 </PreTitle>
 
                 <Title className="text-center"> 
-                    Lorem <TitleGreen>Ipsum</TitleGreen>
+                    Queremos ajudá-lo em seu <TitleGreen>crescimento espiritual</TitleGreen>
                 </Title>
+                <p className='text-center'>
+                    Se Jesus está agora em seu coração ou se você deseja conhecê-lo mais, entre em contato com o endereço abaixo.
+                </p>
                 <form onSubmit={handleSubmit} className="px-5 py-4">
                     <div className="row">
                         <div className="col-12 col-md-6">
