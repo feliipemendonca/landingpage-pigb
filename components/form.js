@@ -159,7 +159,7 @@ export default function section () {
         <Main className="pt-5 pb-5">
             <section className="container py-4">
                 <PreTitle className="text-center">
-                    Lorem Ipsum
+                    Contato
                 </PreTitle>
 
                 <Title className="text-center"> 
