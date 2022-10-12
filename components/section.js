@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
 import styled from 'styled-components'
 import image from '../public/images/slide.jpg'
+
 
 const Title = styled.h1`
     font-size: 2rem;
@@ -22,7 +24,6 @@ const Text = styled.p`
     font-size: 1rem;
     font-weight: 400;
     line-height: 150%;
-    backdrop-filter: blur(1px);
 `;
 
 // const Image = styled.img`
@@ -56,7 +57,7 @@ export default function section () {
                 </div>
             </section>
             {/* 1 */}
-            <section className='container py-5'>
+            <section className="container py-5">
                 <div className="row">
                     <div className="col-12 col-md-6 order-2 order-lg-1">
                         <Image
